@@ -1,0 +1,196 @@
+@charset "utf-8";
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// BRANDING
+$tealGreen: #4297A0;
+$ivory: #F4EAE6;
+$coral: #E57F84;
+$mistyBlue: #2F5061;
+$lightGrey: #f5f7fb;
+
+// $purple: #8A4D76;
+// $pink: #FA7C91;
+// $brown: #757763;
+// $beige-light: #D0D1CD;
+// $beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+// $family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: 'Montserrat', sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+$primary: $tealGreen;
+// $link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $lightGrey;
+// $navbar-height: 2.7rem;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+html, body, #root, main {
+    height: 100%;
+}
+
+main {
+    position: relative;
+}
+
+.board-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.board-main-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.board-header {
+    color: #F4EAE6;
+    position: relative;
+    height: auto;
+    margin: 10px 0;
+    padding: 8px 4px 4px 12px;
+}
+
+.board-canvas {
+    position: relative;
+    flex-grow: 1;
+}
+
+.board {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 9px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.board-item {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    margin: 0 4px;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 272px;
+}
+
+.board-item:first-child {
+    margin-left: 12px;
+}
+
+.add-board-item {
+    background-color: #ffffff3d;
+    cursor: pointer;
+    border-radius: 3px;
+    height: auto;
+    min-height: 32px;
+    padding: 4px;
+}
+
+.add-board-item:last-child {
+    margin-right: 8px;
+}
+
+.board-item-content {
+    background-color: #ebecf0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
+    width: 100% !important;
+}
+
+.board-item-header {
+    flex: 0 0 auto;
+    min-height: 20px;
+    padding: 10px 8px;
+    position: relative;
+}
+
+.board-item-header > h2 {
+    font-weight: 600;
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.board-item-cards {
+    flex: 1 1 auto;
+    margin: 0 4px;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 4px;
+    z-index: 1;
+}
+
+.board-item-cards > .board-item-card {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #091e4240;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+}
+
+.board-card-add-container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 38px;
+    min-height: 38px;
+}
+
+.board-card-add {
+    border-radius: 3px;
+    color: #5e6c84;
+    display: block;
+    flex: 1 0 auto;
+    margin: 2px 0 8px 8px;
+    padding: 4px 8px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+}
+
+// .board-main-content {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .board-header {
+//     height: auto;
+//     //height: 42px;
+// }
+
+// .board-canvas {
+//     flex: 1;
+//     // margin-top: 42px;
+// }
+
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/bulma.sass";
